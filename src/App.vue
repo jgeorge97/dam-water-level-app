@@ -8,17 +8,12 @@
             </b-navbar-item>
         </template>
         <template #start>
-            <b-navbar-item href="#">
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 Home
             </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
-                </b-navbar-item>
-            </b-navbar-dropdown>
+            <b-navbar-item tag="router-link" :to="{ path: '/about' }">
+                About
+            </b-navbar-item>
         </template>
       </b-navbar>
     </div>
@@ -27,7 +22,7 @@
       <footer class="footer">
         <div class="content has-text-centered">
             <p>
-              <strong>Dam Water Level Status App</strong> by <a href="https://jgthms.com">George Martin Jose</a>. The source code is listed on <a href="https://github.com/jgeorge97">Github</a>. Data by <a href="https://sdma.kerala.gov.in/dam-water-level/">KSDMA</a>.
+              <strong>Dam Water Level Status App</strong> by <a href="https://github.com/jgeorge97" target="_blank">George Martin Jose</a> & Idea by <a href="https://github.com/kishorv06" target="_blank" rel="noopener noreferrer">Kishor V</a>. Data Source: <a href="https://sdma.kerala.gov.in/dam-water-level/">KSDMA</a>.
             </p>
           </div>
         </footer>

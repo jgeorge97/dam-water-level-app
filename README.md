@@ -1,6 +1,8 @@
 # Dam Water Level App
 Web App to display the status of various dams in Kerala. Data sourced from [KSDMA Site](https://sdma.kerala.gov.in/dam-water-level/). 
 
+[Live Preview](https://dam-level.netlify.app)
+
 [Backend Source Code](https://github.com/jgeorge97/dam-water-level-app-backend)
 
 ## Enviroment Variables
