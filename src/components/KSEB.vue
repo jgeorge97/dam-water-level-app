@@ -2,6 +2,7 @@
   <div>
     <div class="mt-5 has-text-info">
       <h2>Last Updated on : {{ lastUpdated }}</h2>
+      <span class="is-size-7">Note: If there is any error in the data, try clearing site data & reloading the page</span>
     </div>
     <div class="columns is-centered">
       <div class="column is-half">
