@@ -16,13 +16,13 @@
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Current Water Level</p>
-                  <p class="title">{{ dam.currentWaterLevel }} Mtrs</p>
+                  <p class="title">{{ dam.currentWaterLevel }}</p>
                 </div>
               </div>
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Dam Maximum Capacity</p>
-                  <p class="title">{{ dam.maxWaterLevel }} Mtrs</p>
+                  <p class="title">{{ dam.maxWaterLevel }}</p>
                 </div>
               </div>
               <div class="level-item has-text-centered">
