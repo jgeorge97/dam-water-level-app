@@ -32,7 +32,7 @@
                 </div>
               </div>            
             </nav>
-            <nav class="level">
+            <nav class="level" v-if="dam.spillAmount">
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Spill Amount</p>
@@ -40,14 +40,16 @@
                 </div>
               </div>
             </nav>
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Remarks</p>
+            <div v-if="dam.remarks">
+              <nav class="level">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Remarks</p>
+                  </div>
                 </div>
-              </div>
-            </nav>
-            <div class="content is-size-7 remarks">{{dam.remarks}}</div>
+              </nav>
+              <div class="content is-size-7 remarks">{{dam.remarks}}</div>
+            </div>
           </div>
         </div>
       </div>
