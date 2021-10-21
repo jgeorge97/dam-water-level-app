@@ -80,11 +80,24 @@ export default {
         this.isLoading = true
         let res = await fetch(process.env.VUE_APP_API_URL + '/dam/getIrrigationData')
         let result = await res.json()
-        this.damData = result.message
-        this.lastUpdated = result.last_updated
-        this.isLoading = false
+        if(!result.error) {
+          this.damData = result.message
+          this.lastUpdated = result.last_updated
+          this.isLoading = false
+        } else {
+          this.$buefy.notification.open({
+            message: `Some Error has occured`,
+            type: 'is-danger',
+          })
+          this.isLoading = false
+        }
       } catch (error) {
         console.error(error);
+        this.$buefy.notification.open({
+          message: `Some Error has occured`,
+          type: 'is-danger',
+        })
+        this.isLoading = false
       }
     }
   }
