@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <b-tabs type="is-toggle" position="is-centered" expanded class="">
       <b-tab-item label="KSEB Dams">
         <KSEB />
@@ -29,5 +29,8 @@ export default {
     margin-top: 0.5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+  #home {
+    text-align: center;
   }
 </style>

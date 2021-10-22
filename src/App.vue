@@ -4,7 +4,7 @@
       <b-navbar type="is-primary">
         <template #brand>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                Dam Water Level Status
+                Dam Water Level Status 
             </b-navbar-item>
         </template>
         <template #start>
@@ -35,7 +35,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>
