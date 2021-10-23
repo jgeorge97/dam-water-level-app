@@ -9,7 +9,7 @@
         <div class="card" v-for="dam in damData" v-bind:key="dam.slNo">
           <header class="card-header">
             <p class="card-header-title is-size-5">
-              {{ dam.name }}
+              {{ dam.name.en }}
             </p>
           </header>
           <div class="card-content">
