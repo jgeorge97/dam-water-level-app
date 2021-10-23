@@ -26,7 +26,7 @@
                   <p class="title">{{ dam.maxWaterLevel }} Mtrs</p>
                 </div>
               </div>
-              <div class="level-item has-text-centered">
+              <div class="level-item has-text-centered" v-if="dam.percentStorage">
                 <div>
                   <p class="heading">Dam Storage Percent</p>
                   <p class="title">{{ dam.percentStorage }}</p>
