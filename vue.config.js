@@ -1,7 +1,6 @@
 module.exports = {
   pwa: {
     name: 'Dam Water Level App',
-    workboxPluginMode: 'InjectManifest',
     themeColor: '#7957D5'
   },
   chainWebpack: config => {
