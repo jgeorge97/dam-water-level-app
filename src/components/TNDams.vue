@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mt-5 has-text-info">
-      <h2>Last Updated on : {{ lastUpdated }}</h2>
+      <h2>Last Updated on : Today</h2>
       <span class="is-size-7">Note: If there is any error in the data, try clearing site data & reloading the page</span>
     </div>
     <div class="columns is-centered">
@@ -17,13 +17,13 @@
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Current Water Level</p>
-                  <p class="title">{{ dam.currentWaterLevel }} Mtrs</p>
+                  <p class="title">{{ dam.currentWaterLevel }}</p>
                 </div>
               </div>
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Maximum Water Level</p>
-                  <p class="title">{{ dam.maxWaterLevel }} Mtrs</p>
+                  <p class="title">{{ dam.maxWaterLevel }}</p>
                 </div>
               </div>
               <div class="level-item has-text-centered" v-if="dam.percentStorage">
@@ -31,9 +31,9 @@
                   <p class="heading">Dam Storage Percent</p>
                   <p class="title">{{ dam.percentStorage }}</p>
                 </div>
-              </div>
+              </div>            
             </nav>
-            <nav class="level">
+            <nav class="level" v-if="dam.spillAmount">
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Spill Amount</p>
@@ -41,14 +41,16 @@
                 </div>
               </div>
             </nav>
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Remarks</p>
+            <div v-if="dam.remarks">
+              <nav class="level">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Remarks</p>
+                  </div>
                 </div>
-              </div>
-            </nav>
-            <div class="content is-size-7 remarks">{{dam.remarks}}</div>
+              </nav>
+              <div class="content is-size-7 remarks">{{dam.remarks}}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +63,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "Irrigation",
+  name: "TNDams",
   data() {
     return {
       damData: [],
@@ -78,11 +80,10 @@ export default {
     async fetchData() {
       try {
         this.isLoading = true
-        let res = await fetch(process.env.VUE_APP_API_URL + '/dam/getIrrigationData')
+        let res = await fetch(process.env.VUE_APP_API_URL + '/dam/getTNDamData')
         let result = await res.json()
         if(!result.error) {
           this.damData = result.message
-          this.lastUpdated = result.last_updated
           this.isLoading = false
         } else {
           this.$buefy.notification.open({

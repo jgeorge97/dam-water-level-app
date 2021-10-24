@@ -22,7 +22,7 @@
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Dam Maximum Capacity</p>
+                  <p class="heading">Maximum Water Level</p>
                   <p class="title">{{ dam.maxWaterLevel }}</p>
                 </div>
               </div>

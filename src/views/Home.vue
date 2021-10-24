@@ -7,6 +7,9 @@
       <b-tab-item label="Irrigation Dams">
         <Irrigation />
       </b-tab-item>
+      <b-tab-item label="TN Dams">
+        <TNDams />
+      </b-tab-item>
     </b-tabs>
   </div>
 </template>
@@ -14,12 +17,13 @@
 <script>
 import KSEB from '../components/KSEB.vue'
 import Irrigation from '../components/Irrigation.vue'
-
+import TNDams from "../components/TNDams.vue";
 export default {
   name: 'Home',
   components: {
     KSEB,
     Irrigation,
+    TNDams,
   }
 }
 </script>

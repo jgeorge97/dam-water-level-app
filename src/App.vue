@@ -22,7 +22,7 @@
       <footer class="footer">
         <div class="content has-text-centered">
             <p>
-              <strong>Dam Water Level Status App</strong> by <a href="https://github.com/jgeorge97" target="_blank">George Martin Jose</a>. Data Source: <a href="https://sdma.kerala.gov.in/dam-water-level/">KSDMA</a>.
+              <strong>Dam Water Level Status App</strong> by <a href="https://github.com/jgeorge97" target="_blank">George Martin Jose</a>. Data Source: <a href="https://sdma.kerala.gov.in/dam-water-level/">KSDMA</a> & <a href="https://www.tnagrisnet.tn.gov.in/" target="_blank" rel="noopener noreferrer">AGRISNET</a>.
             </p>
           </div>
         </footer>
