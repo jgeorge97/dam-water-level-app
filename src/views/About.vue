@@ -5,7 +5,7 @@
     <p><a href="https://github.com/jgeorge97/dam-water-level-app" target="_blank" rel="noopener noreferrer">App Code</a> <a href="https://github.com/jgeorge97/dam-water-level-app-backend" target="_blank" rel="noopener noreferrer">Server Code</a></p>
     <p>If you would like to contribute or raise an issue to this project please see the respective Github links above. Need some Bugs fixed & features to be done, JS devs(newbies included) are welcome.</p>
     <p>Suggestions & Feedback welcome at <a href="mailto:jgeorge97@gmail.com">jgeorge97@gmail.com</a></p>
-    <p>Chat with us at <a href="https://gitter.im/dam-water-level-app/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank" rel="noopener noreferrer">Gitter</a> or <a href="https://matrix.to/#/#dam-water-level-app_community:gitter.im" target="_blank" rel="noopener noreferrer">Matrix</a></p>
+    <p>Chat with us at <a href="https://t.me/dam_level_app_community" target="_blank" rel="noopener noreferrer">Telegram</a></p>
     <p>Self Hosted <a href="https://umami.is/" target="_blank" rel="noopener noreferrer">Umami</a> Analytics (Privacy Friendly) is enabled for this site.</p>
   </div>
 </template>
