@@ -7,7 +7,7 @@
       <b-tab-item label="Irrigation Dams">
         <Irrigation />
       </b-tab-item>
-      <b-tab-item label="TN Dams">
+      <b-tab-item label="Other Dams">
         <TNDams />
       </b-tab-item>
     </b-tabs>
