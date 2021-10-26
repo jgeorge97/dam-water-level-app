@@ -2,7 +2,10 @@
   <div>
     <div class="mt-5 has-text-info">
       <h2>Last Updated on : Today</h2>
-      <span class="is-size-7">Note: If there is any error in the data, try clearing site data & reloading the page</span>
+      <span class="is-size-7"
+        >Note: If there is any error in the data, try clearing site data &
+        reloading the page</span
+      >
     </div>
     <div class="columns is-centered">
       <div class="column is-half">
@@ -26,12 +29,15 @@
                   <p class="title">{{ dam.maxWaterLevel }}</p>
                 </div>
               </div>
-              <div class="level-item has-text-centered" v-if="dam.percentStorage">
+              <div
+                class="level-item has-text-centered"
+                v-if="dam.percentStorage"
+              >
                 <div>
                   <p class="heading">Dam Storage Percent</p>
                   <p class="title">{{ dam.percentStorage }}</p>
                 </div>
-              </div>            
+              </div>
             </nav>
             <nav class="level" v-if="dam.spillAmount">
               <div class="level-item has-text-centered">
@@ -49,13 +55,17 @@
                   </div>
                 </div>
               </nav>
-              <div class="content is-size-7 remarks">{{dam.remarks}}</div>
+              <div class="content is-size-7 remarks">{{ dam.remarks }}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <b-loading :is-full-page="true" v-model="isLoading" :can-cancel="true"></b-loading>
+    <b-loading
+      :is-full-page="true"
+      v-model="isLoading"
+      :can-cancel="true"
+    ></b-loading>
   </div>
 </template>
 
@@ -69,46 +79,47 @@ export default {
       damData: [],
       lastUpdated: "",
       isLoading: false,
-    }
+    };
   },
-  components: {
-  },
+  components: {},
   mounted() {
-    this.fetchData()
+    this.fetchData();
   },
   methods: {
     async fetchData() {
       try {
-        this.isLoading = true
-        let res = await fetch(process.env.VUE_APP_API_URL + '/dam/getTNDamData')
-        let result = await res.json()
-        if(!result.error) {
-          this.damData = result.message
-          this.isLoading = false
+        this.isLoading = true;
+        let res = await fetch(
+          process.env.VUE_APP_API_URL + "/dam/getTNDamData"
+        );
+        let result = await res.json();
+        if (!result.error) {
+          this.damData = result.message;
+          this.isLoading = false;
         } else {
           this.$buefy.notification.open({
             message: `Some Error has occured`,
-            type: 'is-danger',
-          })
-          this.isLoading = false
+            type: "is-danger",
+          });
+          this.isLoading = false;
         }
       } catch (error) {
         console.error(error);
         this.$buefy.notification.open({
           message: `Some Error has occured`,
-          type: 'is-danger',
-        })
-        this.isLoading = false
+          type: "is-danger",
+        });
+        this.isLoading = false;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
-  .card {
-    margin-top: 0.45rem;
-  }
-  .remarks {
-    margin-top: -20px;
-  }
+.card {
+  margin-top: 0.45rem;
+}
+.remarks {
+  margin-top: -20px;
+}
 </style>
