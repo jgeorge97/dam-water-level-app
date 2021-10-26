@@ -15,26 +15,26 @@
 </template>
 
 <script>
-import KSEB from '../components/KSEB.vue'
-import Irrigation from '../components/Irrigation.vue'
+import KSEB from "../components/KSEB.vue";
+import Irrigation from "../components/Irrigation.vue";
 import TNDams from "../components/TNDams.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     KSEB,
     Irrigation,
     TNDams,
-  }
-}
+  },
+};
 </script>
 
 <style>
-  .tabs {
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  #home {
-    text-align: center;
-  }
+.tabs {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#home {
+  text-align: center;
+}
 </style>
